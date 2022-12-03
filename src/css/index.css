@@ -1,0 +1,278 @@
+
+:root {
+  --primary: #fed941;
+  --secundary: #0e3fa9;
+  --primary-filter: invert(77%) sepia(59%) saturate(550%) hue-rotate(355deg) brightness(350%) contrast(50%);
+  --white: #fffffe;
+  --grey: #a7a9be;
+  --black: #000000;
+  --black-filter: brightness(0) saturate(100%);
+  --background:#0f0e17;
+  --background-secundary:#a7a9be;
+  --headline1: 700 3rem/3.625rem Montserrat;
+  --headline2: 800 2.875rem/3.5rem Montserrat;
+  --headline3: 700 1.75rem/normal Montserrat;
+  --headline4: 700 1.5625rem/normal Montserrat;
+  --headline5: 700 1.3rem/normal Montserrat;
+  --button: 700 1.125rem/1.75rem Montserrat;
+  --caption: 400 0.75rem/1.375rem Montserrat;
+  --body1-regular: 400 1.125rem/1.6875rem Montserrat;
+  --body1-bold: 700 1.125rem/1.6875rem Montserrat;
+  --body2-regular: 400 1rem/1.375rem Montserrat;
+  --body2-bold: 700 1rem/1.1875rem Montserrat;
+  --body3-regular: 400 .85rem/1.375rem Montserrat;
+  --body3-bold: 700 .85rem/1.1875rem Montserrat;
+  --body4-regular: 400 .65rem/1.375rem Montserrat;
+  --body4-bold: 700 .65rem/1.1875rem Montserrat;
+  --menu-list-item: normal 700 1rem/1.1875rem Inter;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--grey);
+}
+*:active {
+  scrollbar-color: var(--primary);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: .25rem;
+  height: .375rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--grey);
+  border-radius: 5px
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--white)
+}
+
+body, header, main, section, footer, div, ul, li {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font: var(--body1-regular);
+  background-color: var(--background);
+}
+
+h1{
+  background-color: var(--background);
+  color: var(--primary);
+  font: var(--headline1);
+}
+
+h2{
+  font: var(--headline2);
+}
+
+h2,h3,h4,h5,h6 {
+  color: var(--white);
+}
+
+p{
+  color: var(--grey);
+  font: var(--button);
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.d-none {
+  display: none !important;
+}
+.d-block {
+  display: block !important;
+}
+.d-flex {
+  display: flex !important;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 .5rem;
+}
+
+.position-relative {
+  position: relative
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  flex: 0 0 auto;
+}
+.col {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+.col-6 {
+  flex: 0 0 50%;
+  width: 50%;
+}
+.col-12 {
+  flex: 0 0 100%;
+  width: 100%;
+}
+.col, .col-auto, .col-6, .col-12 {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.align-items-baseline {
+  align-items: baseline;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+.aligned-flexible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-0 {
+  margin: 0
+}
+.mt-0 {
+  margin-top: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.m-1 {
+  margin: 1rem;
+}
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.p-0 {
+  padding: 0
+}
+.p-1 {
+  padding: 1rem;
+}
+.pt-0 {
+  padding-top: 0
+}
+.pr-0 {
+  padding-right: 0
+}
+.pb-0 {
+  padding-bottom: 0
+}
+.pl-0 {
+  padding-left: 0
+}
+.pt-1 {
+  padding-top: 1rem;
+}
+.pb-1 {
+  padding-bottom: 1rem;
+}
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.non-clickable {
+  border: 0;
+  cursor: auto;
+}
+
+.no-image {
+  color: var(--grey);
+  /*border: 1px solid var(--primary);*/
+  /*padding: 0 0.5rem;*/
+  border-radius: 10px;
+  position: relative;
+  width: 80px;
+  height: 120px;
+  margin: 0 auto .2rem
+}
+/*.no-image::after {
+  position: absolute;
+  top: 48%;
+  left: -27%;
+  transform: rotateZ(52deg);
+  content: '';
+  width: 150px;
+  height: 4px;
+  background-color: var(--primary);
+}*/
+.no-image > svg.cast-poster {
+  width: 60px;
+  height: 80px;
+}

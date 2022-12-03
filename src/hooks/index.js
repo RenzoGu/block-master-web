@@ -1,0 +1,7 @@
+export { useMovie } from './src/useMovie'
+export { useMovieProvider } from './src/useMovieProvider'
+export { useMovieSimilar } from './src/useMovieSimilar'
+export { useMovieRecomended } from './src/useMovieRecomended'
+export { useMovieReview } from './src/useMovieReview'
+export { useMovieCredit } from './src/useMovieCredit'
+export { useMovieVideo } from './src/useMovieVideo'

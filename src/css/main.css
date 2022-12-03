@@ -1,0 +1,249 @@
+.movie {
+	flex: 0 0 auto;
+	width: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.movie > .movie-content {
+	cursor: pointer;
+}
+.movie-content {
+	position: relative;
+	overflow: hidden;
+	width: fit-content;
+	margin: auto;
+}
+
+.movie-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.movies-title {
+	font: var(--headline2);
+	color: var(--white);
+}
+
+.movie-poster, .cast-poster {
+	border-radius: .5rem;
+	height: 278px;
+	width: 185px;
+}
+.no-movies-poster {
+	border: 1px solid var(--primary);
+}
+
+.movie-rate {
+	position: absolute;
+	top: 1.5rem;
+	left: -2px;
+	opacity: 0.8;
+	display: flex;
+	align-items: center;
+	color: var(--white);
+	background-color: var(--black);
+	gap:  .5rem;
+	font: var(--headline4);
+	padding: .5rem 1rem .5rem 1.3rem;
+	border: 2px solid var(--primary);
+	border-radius: 0 2rem 2rem 0;
+	transition: all .55s ease-in-out;
+}
+.no-movies-poster + .movie-rate {
+	opacity: 1;
+	background-color: var(--background);
+}
+
+.movie-rate.rounded {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	left: 1.5rem;
+	padding: 0;
+	justify-content: center;
+}
+
+.movie-container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	position: fixed;
+	left: 0;
+	top: 100%;
+	z-index: 9999;
+	background-color: rgba(0,0,0, .95);
+	overflow: auto;
+	padding: 1rem 1rem 1rem 0
+}
+.movie-container > .movie-content {
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+.movie-container > .movie-content > .close {
+	margin: 1rem 1rem;
+	transform: rotateZ(45deg);
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+}
+.movieInfo-content {
+	transition: all .5s ease-in-out;
+}
+.movieInfo-content.center-fit-content {
+	width: fit-content;
+  margin: 0 auto;
+}
+.movieInfo-content ul, .movieInfo-content li.col {
+	padding: 0
+}
+.movieInfo-content .data-col {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 0 calc(1rem + 6px) 0 1rem
+}
+.movieInfo-content .data-col::after {
+	content: '';
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--background-secundary);
+	position: absolute;
+	right: 0
+}
+.movieInfo-content .data-col:first-child {
+	padding-left: 0
+}
+.movieInfo-content .data-col:last-child {
+	padding-right: 0
+}
+.movieInfo-content .data-col:last-child::after {
+	content: none
+}
+.movieInfo-content li {
+	color: var(--white);
+	list-style: none;
+}
+.movieInfo-img {
+	min-width: 250px;
+	margin: 0 auto;
+	text-align: center;
+	transition: all .6s ease-in-out;
+}
+.movieInfo-img img {
+	max-height: 200px;
+}
+.watch-body {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.watch-body > .col {
+	align-self: center;
+}
+
+.loader-container {
+	width: 100%;
+	min-height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.provider-list-container {
+	color: var(--white);
+}
+.provider-img {
+	max-width: 50px;
+	border-radius: 10px
+}
+
+.more-info {
+	color: var(--grey)
+}
+
+.movie-similar-container {
+	overflow-x: hidden;
+}
+.movie-similar-container .movie-similar-content {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+}
+.movie-similar-container .movie-similar-content > .movie {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+.movie-credit-container {
+	overflow-y: hidden;
+	max-height: 500px;
+}
+.movie-credit-container .movie-credit-col {
+	overflow-y: auto;
+	height: fit-content;
+	max-height: 290px;
+}
+.movie-credit-container .movie-credit-content .credit-row {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+}
+.movie-credit-container .movie-credit-content .credit-row .cast {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+.cast-poster {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: .3rem;
+	border-radius: .5rem;
+	height: 120px;
+	width: 80px;
+}
+
+.character-name {
+	margin: 0;
+	display: flex;
+	font: var(--body4-regular);
+	max-width: 120px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.movie-review-container {
+	border-top: 1px solid var(--white);
+	border-bottom: 1px solid var(--white);
+}
+.movie-review-content {
+	border-bottom: 1px solid rgba(255,255,255, 0.7)
+}
+.movie-review-content:last-child {
+	border-bottom: none
+}
+.review-content {
+	text-indent: 1rem;
+}
+.review-content::first-letter {
+	text-transform: uppercase
+}
+.review-date {
+	font: var(--body3-regular);
+}
+.review-avatar {
+	width: 100%;
+	max-width: 75px;
+}

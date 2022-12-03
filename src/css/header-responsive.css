@@ -1,0 +1,66 @@
+/**
+ *
+ * Extra small devices (portrait phones, less than 576px)
+ * No media query for `xs` since this is the default in Bootstrap
+ */
+
+/**
+ *
+ * Small devices (landscape phones, 576px and up)
+ */
+@media (min-width: 576px) {
+}
+
+/**
+ *
+ * Medium devices (tablets, 768px and up)
+ */
+@media (min-width: 768px) {
+}
+
+/**
+ *
+ * Large devices (desktops, 992px and up)
+ */
+@media (min-width: 992px) {
+	.navbar .item.button {
+		display: none
+	}
+	.navbar .item.button + .item.group {
+		display: list-item;
+		width: auto;
+		position: relative;
+		background: transparent;
+		z-index: auto;
+	}
+	.navbar .item.button + .item.group > .navbar {
+		position: relative;
+		transform: translateY(0);
+		flex-direction: row;
+		align-items: center;
+		z-index: auto;
+		opacity: 1;
+		padding-bottom: 0
+	}
+	.navbar .item.button.show + .item.group > .navbar > .item {
+		padding-right: 1.5rem;
+		padding-left: 1.5rem;
+		padding-bottom: 0;
+		width: auto;
+		text-align: center;
+	}
+}
+
+/**
+ *
+ * Extra large devices (large desktops, 1366px and up)
+ */
+@media (min-width: 1200px) {
+}
+
+/**
+ *
+ * Extra large devices (large desktops, 1366px and up)
+ */
+@media (min-width: 1400px) {
+}
