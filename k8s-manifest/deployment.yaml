@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clmusicplace
+spec:
+  selector:
+    matchLabels:
+      name: clmusicplace
+  template:
+    metadata:
+      labels:
+        name: clmusicplace
+    spec:
+      containers:
+        - image: renzoguerracandela/repomusicplace
+          name: clmusicplace
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              protocol: TCP
