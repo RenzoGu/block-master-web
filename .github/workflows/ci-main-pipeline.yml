@@ -121,7 +121,7 @@ jobs:
              k8s-manifest/deployment.yaml
              k8s-manifest/ingress-dev.yaml
              k8s-manifest/service.yaml
-          images: 'renzoguerracandela/repomusicplace:main'
+          images: 'renzoguerracandela/repomusicplace:development'
           pull: false
       - name: Actualizar Despliegue
         run: kubectl rollout restart deployment clmusicplace -n development
