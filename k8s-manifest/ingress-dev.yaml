@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: clmusicplace-dns-d798cfa2.hcp.eastus2.azmk8s.io
+  - host: clmusicplace.20.72.119.202.nip.io
     http:
       paths:
       - path: /
